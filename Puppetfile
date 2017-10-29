@@ -30,8 +30,8 @@ mod 'ntp',
 
 mod 'role',
   :git => 'https://github.com/piumi-t/puppet-role.git',
-  :ref => 'development'
+  :ref => 'master'
 
 mod 'profile',
   :git => 'https://github.com/piumi-t/puppet-profile.git',
-  :ref => 'development'
+  :ref => 'master'
