@@ -23,12 +23,8 @@ File { backup => false }
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-node  'shashiudawa6.mylabserver.com' {
-  notify { 'test for node def':
-    message => "This is a node definition",
-  }
-}
 node default {
+  hiera_include ('classes')
   #include ntp
   #class { 'ntp': }
   # This is where you can declare classes for all nodes.
