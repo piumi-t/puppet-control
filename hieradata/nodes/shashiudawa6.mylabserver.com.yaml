@@ -22,7 +22,7 @@ service_enable: true
 service_hasstatus: true
 service_hasrestart: true                                                                                            
 docroot: /usr/share/nginx
-profile::nginx::vhost: 
+profile::nginx::vhosts: 
  - 'fqdn': 'shashiudawa4.mylabserver.com'
    'port': 80
    'server_aliases': ''
