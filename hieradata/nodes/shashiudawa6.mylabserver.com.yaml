@@ -1,3 +1,33 @@
 ---
-classes:
- - role::docker
+package_ensure: present
+package_name: nginx
+config_dir: /etc/nginx
+config_ensure: file
+config_mode: '0664'
+config_owner: root
+config_group: root
+config_confd: "%{config_dir}/conf.d"
+config_log_dir: /var/log/nginx
+config_pid_file: /run/nginx.pid
+config_vdir_enable_debian: "%{config_dir}"
+config_vdir_enable_default: undef
+config_process_user_debian: www-data
+config_process_user_default: nginx
+vhost_dir_debian: "%{config_dir}/sites-avaliable"
+vhost_dir_default: "%{config_confd}"
+service_name: nginx
+service_ensure: running
+service_pattern: nginx
+service_enable: true
+service_hasstatus: true
+service_hasrestart: true                                                                                            
+docroot: /usr/share/nginx
+profile::nginx::vhost: 
+ - 'fqdn': 'shashiudawa4.mylabserver.com'
+   'port': 80
+   'server_aliases': ''
+ - 'fqdn': 'shashiudawa4b.mylabserver.com'
+   'port': 443
+   'server_aliases': 'shashiudawa4b1.mylabserver.com'
+classes: 
+ - role::nginx
