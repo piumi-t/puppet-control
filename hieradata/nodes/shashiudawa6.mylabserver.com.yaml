@@ -23,11 +23,11 @@ nginx::service_hasstatus: true
 nginx::service_hasrestart: true                                                                                            
 nginx::docroot: /usr/share/nginx
 profile::nginx::vhosts: 
- - 'fqdn': 'shashiudawa4.mylabserver.com'
+ - 'fqdn': 'shashiudawa6.mylabserver.com'
    'port': 80
    'server_aliases': ''
- - 'fqdn': 'shashiudawa4b.mylabserver.com'
+ - 'fqdn': 'shashiudawa6b.mylabserver.com'
    'port': 443
-   'server_aliases': 'shashiudawa4b1.mylabserver.com'
+   'server_aliases': 'shashiudawa6b1.mylabserver.com'
 classes: 
  - role::nginx
