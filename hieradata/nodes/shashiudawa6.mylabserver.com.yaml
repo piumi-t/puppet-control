@@ -10,11 +10,11 @@ nginx::config_confd: "%{config_dir}/conf.d"
 nginx::config_log_dir: /var/log/nginx
 nginx::config_pid_file: /run/nginx.pid
 #nginx::config_vdir_enable_debian: "%{config_dir}"
-#nginx::config_vdir_enable_default: undef
+nginx::config_vdir_enable: undef
 #nginx::config_process_user_debian: www-data
-#nginx::config_process_user_default: nginx
+nginx::config_process_user: nginx
 #nginx::vhost_dir_debian: "%{config_dir}/sites-avaliable"
-#nginx::vhost_dir_default: "%{config_confd}"
+nginx::vhost_dir: "%{config_confd}"
 nginx::service_name: nginx
 nginx::service_ensure: running
 nginx::service_pattern: nginx
