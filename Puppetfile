@@ -25,7 +25,7 @@ mod 'ssh',
   :ref => 'master'
 
 mod 'ntp',
-  :git => 'https://github.com/piumi-t/puppet-ntp.git',
+  :git => 'https://github.com/piumi-t/puppet-ntp',
   :ref => 'master'
 
 mod 'role',
@@ -36,6 +36,6 @@ mod 'profile',
   :git => 'https://github.com/piumi-t/puppet-profile.git',
   :ref => 'master'
 
-mod 'nginx',
-  :git => 'https://github.com/piumi-t/puppet-nginx.git',
-  :ref => 'master'
+#mod 'nginx',
+#  :git => 'https://github.com/piumi-t/puppet-nginx.git',
+#  :ref => 'master'
